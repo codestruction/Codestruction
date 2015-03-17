@@ -1,0 +1,18 @@
+﻿@inherits UmbracoViewPage<Codestruction.Application.Contracts.ViewModels.BlogListingPageVm>
+@*@inherits Umbraco.Web.Mvc.UmbracoTemplatePage*@
+@{
+    Layout = "MasterPage.cshtml";
+}
+
+
+@*foreach (var blogpost in CurrentPage.Children)
+{
+    <span>@blogpost.title</span>
+    <span>@blogpost.content</span>
+    <span>@blogpost.tags</span>
+}*@
+
+@foreach (var post in Model.BlogPosts)
+{
+    <span>@post.Title</span>
+}
