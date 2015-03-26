@@ -1,0 +1,72 @@
+@media only screen and (min-width: 1350px){
+.sizer-wrapper{left:-60px;}
+}
+
+@media only screen and (max-width: 1200px){
+.sizer-wrapper{display: none;}
+.prev-next{display: none;}
+.parallax{background-repeat: no-repeat !important;background-attachment:scroll  !important;background-position:center  !important;background-size: auto  !important;}
+.social-links-footer{padding-left:50px;}
+.newsletter-box{padding-right: 90px;}
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px){
+
+}
+
+@media only screen and (max-width: 991px){
+.js #nav{display:none;}
+.js .slicknav_menu{display:block;}
+.modern-scroll-effect{padding-top: 0;}
+#nav-menu{position: absolute;}
+.classic-blog-wrap{margin-top: 140px;}
+.slides.grid-2 li div.grid-box, .slides.grid-3 li div.grid-box, .slides.grid-4 li div.grid-box, .slides.grid-5 li div.grid-box, .slides.grid-6 li div.grid-box{width: 100% !important;}
+.social-links-footer li{margin-right: 50px;margin-bottom: 30px;}
+.social-links-footer li:nth-child(3n+3){margin-right: 50px;}
+.social-newsletter{width:100%;float: none;}
+.social-side{width:100%;float: none;}
+.newsletter-box{float:none !important;padding-right: 0 !important;max-width: 100% !important;padding-bottom: 50px;}
+.social-box{max-width: 100% !important;padding-bottom: 50px;}
+.grdh-1 h1{font-size: 30px;line-height: 35px;}
+}
+
+@media only screen and (max-width: 767px){
+.modern-title h1{font-size: 35px;line-height: 40px;}
+.post-title-container h1{font-size: 24px!important;line-height: 28px!important;}
+.modern-single-post .title h1{font-size: 35px;line-height: 40px;}
+.modern-excerpt p{font-size: 20px;line-height: 28px;}
+.sidebar-widget .widget_wysija input[type="text"]{width:55%;}
+.modern-grid-box {height: auto;}
+.grid-title h1{line-height: 75px;}
+.blog-post-share{padding-bottom: 30px;}
+.related-post-container .related-posts{margin-bottom: 60px;}
+.com-title h4{font-size: 15px;}
+.com-info h5{font-size: 15px;padding-top:3px;}
+.pagination ul li.last {right: 0;position: relative;border-left: 0;padding-left: 0;}
+.post-materials ul li{float: none;padding: 0 !important;margin: 0 !important;line-height: 25px;border-right: 0;padding-right: 0 !important;padding-left: 0 !important;}
+.share-tools ul li:first-child{padding-left: 0px;}
+.share-tools ul li:after{content: "|";padding-left: 8px;padding-right: 8px;}
+.post-materials ul li i{ width: 20px; }
+}
+
+
+/* Tablet Portrait size to Tablet Landscape (devices and browsers) */
+@media only screen and (min-width: 768px) and (max-width: 991px){
+
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px){
+
+}
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {
+.share-mobile-check .pull-right{float:left !important;}
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+    only screen and (-o-min-device-pixel-ratio: 3/2),
+    only screen and (min--moz-device-pixel-ratio: 1.5),
+    only screen and (min-device-pixel-ratio: 1.5) {
+
+}

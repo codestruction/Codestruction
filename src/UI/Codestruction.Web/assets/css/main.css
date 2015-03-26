@@ -1,0 +1,90 @@
+﻿
+@font-face {
+     font-family: 'novecento_bold'; 
+     src: url('../fonts/novecento_bold.eot');      
+     src: url('../fonts/novecento_bold.woff') format('woff'),  
+       url('../fonts/novecento_bold.ttf') format('truetype');  
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1, h2, h3, h4 ,h5, h6, .pages-nav ul li a, .bar-box, .spoiler.on:before, .panel-title{
+	font-family: novecento_bold !important;
+}
+
+
+
+
+@font-face {
+     font-family: 'novecento_demibold'; 
+     src: url('../fonts/novecento_demibold.eot');       
+        src : url('../fonts/novecento_demibold.woff') format('woff'),  
+           url('../fonts/novecento_demibold.ttf') format('truetype');     font-weight: normal;
+    font-style: normal;
+}
+
+.post-slider-wrapper .blog-read-more, .sf-menu li a, .menu-container-top .sf-menu li a, #modern-search-wrapper input, #modern-search-wrapper input::-webkit-input-placeholder, .sidebar h4, .footer-widget h4 {
+	font-family: novecento_demibold !important;
+}
+
+
+body, body p{
+	font-family: Open Sans !important;
+	font-weight: 400 !important;
+	color: #666 !important;
+}
+
+
+
+
+
+/* Background */
+
+
+
+body{ 
+
+    background-image: url('http://www.bluthemes.com/themes/breeze/wp-content/themes/breeze/assets/img/pattern/large/grid.png') !important;
+}
+
+
+.logo img{
+	height: 48px !important;
+}
+
+.menu-container{
+	height: 97px !important;
+}
+
+.menu-container-top{	
+	height: 97px !important;
+}
+.menu, .logo h3, .menu-container-top{
+	padding-top: 17px !important;
+}
+
+.sf-menu .menu-item-has-children ul{
+	padding-top: 36px !important;
+}
+
+.classic .sf-menu .menu-item-has-children ul{
+	padding-top: 30px !important;
+}
+
+.search-panel{
+	top: 17px !important;
+}
+
+table a, #wp-calendar a, #wp-calendar caption, caption, cite, var, .active-color, a:hover, .author-name a, .sticky-post i, .blog-classic-share a, .blog-content ul li:before, .blog-post-quote cite a, .blog-post-quote cite p, .link-background:before, .sidebar-widget a:hover,
+.default-post i, .sf-menu li a:hover, .sf-menu .menu-item-has-children:hover:before, .post-paginate p, .blog-post-tag a:hover, .comment-time p, .related-posts .cats ul li a:hover, .related-posts a:hover, .author-info a, .wpt_widget_content .selected a,
+progress, .modern-blog-post-title-container ul li.author a, .recent-post-materials li.author a,.load-more-modern:hover a, .sources a:after, #panel i, .scrollup i, .cllpse-active a, .progress-container, .progress-bar, .modern-blog-post-title-container ul.post-categories li a:hover, .modern-blog-post-title-container h1.checked-title a:hover, .recent-post-materials ul.recent-met li a:hover, .modern-blog-post-title-container.back-check a.blog-read-more:hover, .modern-blog-post-title-container.back-check a.blog-read-more:hover i{ color: #ff0a60 !important; }
+
+kbd, .searchform input[type="submit"], .post-password-form input[type="submit"], .pagination ul li.active a, input[type="submit"], .prev-next h3, #classic-search-wrapper input.s-submit, .load-more-modern
+,.button-style a,.progress-bar, .spoiler.on:before, .flex-control-paging li a.flex-active, .tabbed-area .active, .widget_wysija_cont .updated, .formErrorContent, .social-side{ background: #ff0a60 !important; }
+
+.continue-reading a, .loading:after { border-top-color: #ff0a60 !important; }
+
+
+.comment-content p{
+padding:10px 0;
+}

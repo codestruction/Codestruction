@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Codestruction.Application.Contracts.ViewModels
 {
-    public class BlogPostOverviewDto
+    public class AuthorVm
     {
-        public string Title { get; set; }
-        public string Content { get; set; }
+        public string Name { get; set; }
+        public string Url { get; set; }
     }
 }

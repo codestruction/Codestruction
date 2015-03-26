@@ -203,6 +203,55 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="assets\css\bootstrap.min.css" />
+    <Content Include="assets\css\flexslider.css" />
+    <Content Include="assets\css\font-awesome.min.css" />
+    <Content Include="assets\css\font-awesome\fontawesome-webfont.svg" />
+    <Content Include="assets\css\main.css" />
+    <Content Include="assets\css\responsive.css" />
+    <Content Include="assets\css\slicknav.css" />
+    <Content Include="assets\css\slidebars.css" />
+    <Content Include="assets\css\style.css" />
+    <Content Include="assets\fonts\flexslider-icon.svg" />
+    <Content Include="assets\images\404.png" />
+    <Content Include="assets\images\author.jpg" />
+    <Content Include="assets\images\background.png" />
+    <Content Include="assets\images\favicon.ico" />
+    <Content Include="assets\images\left-arrow-white.png" />
+    <Content Include="assets\images\loading.gif" />
+    <Content Include="assets\images\no-image-big.jpg" />
+    <Content Include="assets\images\no-image-grid.jpg" />
+    <Content Include="assets\images\right-arrow-white.png" />
+    <Content Include="assets\images\right-arrow.png" />
+    <Content Include="assets\images\video_overlay.png" />
+    <Content Include="assets\js\admin\init.js" />
+    <Content Include="assets\js\admin\upload-media.js" />
+    <Content Include="assets\js\background-check.min.js" />
+    <Content Include="assets\js\bootstrap.min.js" />
+    <Content Include="assets\js\classie.js" />
+    <Content Include="assets\js\headroom.min.js" />
+    <Content Include="assets\js\helperPlugins.js" />
+    <Content Include="assets\js\Jplayer.swf" />
+    <Content Include="assets\js\jquery-scrolltofixed-min.js" />
+    <Content Include="assets\js\jquery.fitvids.js" />
+    <Content Include="assets\js\jquery.flexslider.min.js" />
+    <Content Include="assets\js\jQuery.headroom.min.js" />
+    <Content Include="assets\js\jquery.infinitescroll.min.js" />
+    <Content Include="assets\js\jquery.jplayer.min.js" />
+    <Content Include="assets\js\jquery.mousewheel.js" />
+    <Content Include="assets\js\jquery.parallax-1.1.3.js" />
+    <Content Include="assets\js\jquery.prettyembed.min.js" />
+    <Content Include="assets\js\jquery.slicknav.min.js" />
+    <Content Include="assets\js\main.js" />
+    <Content Include="assets\js\modernizr-2.6.2-respond-1.1.0.min.js" />
+    <Content Include="assets\js\prism.js" />
+    <Content Include="assets\js\retina-1.1.0.min.js" />
+    <Content Include="assets\js\slidebars.js" />
+    <Content Include="assets\js\superfish.1.4.1.js" />
+    <Content Include="assets\js\supposition.js" />
+    <Content Include="assets\js\videobg.js" />
+    <Content Include="assets\js\widget\wp-tab-widget.js" />
+    <Content Include="assets\js\widget\wpt-admin.js" />
     <Content Include="packages.config" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\Partials\Grid\Editors\Textstring.cshtml" />
@@ -238,6 +287,23 @@
     <Content Include="Views\BlogDetailsPage.cshtml">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="assets\css\.DS_Store" />
+    <Content Include="assets\css\font-awesome\fontawesome-webfont.eot" />
+    <Content Include="assets\css\font-awesome\fontawesome-webfont.ttf" />
+    <Content Include="assets\css\font-awesome\fontawesome-webfont.woff" />
+    <Content Include="assets\css\font-awesome\FontAwesome.otf" />
+    <Content Include="Views\Partials\Shared\Navigation.cshtml" />
+    <Content Include="assets\fonts\flexslider-icon.eot" />
+    <Content Include="assets\fonts\flexslider-icon.ttf" />
+    <Content Include="assets\fonts\flexslider-icon.woff" />
+    <Content Include="assets\fonts\novecento_bold.eot" />
+    <Content Include="assets\fonts\novecento_bold.ttf" />
+    <Content Include="assets\fonts\novecento_bold.woff" />
+    <Content Include="assets\fonts\novecento_demibold.eot" />
+    <Content Include="assets\fonts\novecento_demibold.ttf" />
+    <Content Include="assets\fonts\novecento_demibold.woff" />
+    <Content Include="assets\js\.DS_Store" />
+    <Content Include="Views\Partials\Blog\Listing\Post.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -261,6 +327,7 @@
       <Name>Codestruction.Application</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

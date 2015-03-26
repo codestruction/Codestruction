@@ -1,27 +1,38 @@
-﻿using System.Collections.Generic;
+﻿using System.Linq;
 using Codestruction.Domain.Blog;
-using umbraco;
-using Umbraco.Web;
+using Examine;
+using Examine.SearchCriteria;
 
 namespace Codestruction.Infrastructure.Umbraco
 {
     public class BlogDao : IBlogDao 
     {
-        public IList<IBlogPostOverview> GetLatestPosts(LatestPostsRequest request)
+        private readonly IBlogPostFactory _blogPostFactory;
+
+        public BlogDao()
+         {
+             _blogPostFactory = new BlogPostFactory();
+         }
+        public SearchResponse<IBlogPostOverview> GetLatestPosts(LatestPostsRequest request)
         {
-            var pageListsing = UmbracoContext.Current.ContentCache.GetById(1058);
+            var searcher = Examine.ExamineManager.Instance.SearchProviderCollection["InternalSearcher"];
+            var searchCriteria = searcher.CreateSearchCriteria(BooleanOperation.And);
 
-            var blogPosts = new List<IBlogPostOverview>();
-            foreach (var postPage in pageListsing.Children)
+            var query = searchCriteria.Field(Consts.BlogFields.DocumentType, Consts.DocumentTypes.BlogDetailsPage);
+        
+            ISearchResults tempResults = searcher.Search(query.Compile());
+            var orderedResults = tempResults.OrderByDescending(f => f.Fields[Consts.BlogFields.PublishDate]);
+
+            var results = orderedResults.Skip((request.Page - 1) * request.PageSize).Take(request.PageSize).OrderByDescending(p => p.Score);
+
+            return new SearchResponse<IBlogPostOverview>()
             {
-                var blogPost = new BlogPost();
-                blogPost.Title = postPage.GetPropertyValue<string>("title");
-                blogPost.Content = postPage.GetPropertyValue<string>("content");
+                Data = results.Select(s => _blogPostFactory.BuildOverview(s)).ToList(),
+                Count = tempResults.TotalItemCount,
+                HasMoreResults = tempResults.TotalItemCount > request.Page * request.PageSize
+            };
 
-                blogPosts.Add(blogPost);
-            }
 
-            return blogPosts;
         }
     }
 }

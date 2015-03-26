@@ -5,7 +5,7 @@ using Umbraco.Web.Mvc;
 
 namespace Codestruction.Application.Controllers
 {
-    public class BlogListingPageController : RenderMvcController 
+    public class HomePageController : RenderMvcController 
     {
 
         public override ActionResult Index(RenderModel model)

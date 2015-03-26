@@ -8,6 +8,6 @@ namespace Codestruction.Domain.Blog
 {
     public interface IBlogDao
     {
-        IList<IBlogPostOverview> GetLatestPosts(LatestPostsRequest request);
+        SearchResponse<IBlogPostOverview> GetLatestPosts(LatestPostsRequest request);
     }
 }

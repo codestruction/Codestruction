@@ -11,8 +11,8 @@ namespace Codestruction.Domain.Blog
         public string Title { get; set; }
         public string Content { get; set; }
         public string Teaser { get; set; }
-        public IList<Tag> Tags { get; set; }
-        public IList<Author> Authors { get; set; }
+        public IList<string> Tags { get; set; }
+        public IList<string> Authors { get; set; }
         public DateTime PublishDate { get; set; }
 
 

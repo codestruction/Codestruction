@@ -1,4 +1,25 @@
-﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+﻿@inherits UmbracoViewPage<Codestruction.Application.Contracts.Blog.BlogListingPageVm>
 @{
     Layout = "MasterPage.cshtml";
 }
+
+
+@foreach (var post in Model.BlogPosts)
+{
+    @Html.Partial("~/Views/Partials/Blog/Listing/Post.cshtml", post)
+}
+           
+<div class="pagination pos-center">
+    <ul>
+        <li class="active"><a href="http://www.2035themes.com/blogy/classic/?classic-layout=right">1</a></li>
+        <li><a href="http://www.2035themes.com/blogy/classic/page/2/?classic-layout=right">2</a></li>
+        <li><a href="http://www.2035themes.com/blogy/classic/page/3/?classic-layout=right">3</a></li>
+        <li class="last"><a href="http://www.2035themes.com/blogy/classic/page/2/?classic-layout=right">Next Page »</a></li>
+    </ul>
+</div>
+
+                     
+                        
+                 
+                       
+              

@@ -74,8 +74,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Contracts\ViewModels\BlogListingPageVm.cs" />
-    <Compile Include="Contracts\ViewModels\BlogPostOverviewVm.cs" />
+    <Compile Include="Contracts\Blog\AuthorVm.cs" />
+    <Compile Include="Contracts\Blog\BlogListingPageVm.cs" />
+    <Compile Include="Contracts\Blog\BlogPostOverviewVm.cs" />
+    <Compile Include="Contracts\Blog\CommentsVm.cs" />
+    <Compile Include="Contracts\Blog\TagVm.cs" />
     <Compile Include="Controllers\BlogDetailsPageController.cs">
       <SubType>Code</SubType>
     </Compile>

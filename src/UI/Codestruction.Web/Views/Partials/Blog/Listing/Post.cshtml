@@ -1,0 +1,65 @@
+﻿@model Codestruction.Application.Contracts.Blog.BlogPostOverviewDto
+           
+<article class="post-66 post type-post status-publish format-image has-post-thumbnail sticky hentry category-modern-2 tag-design tag-interface tag-modern clearfix" id="post-66">
+    <div class="blog-post clearfix">
+        <div class="post-title-container">
+            <h1><a href="@Model.Url">@Model.Title</a></h1>
+            <div class="post-materials clearfix">
+                <ul class="clearfix">
+                    <li>
+                        <i class="fa fa-user"></i> <span class="material-font"> by</span> 
+                        
+                        @foreach (var author in Model.Authors)
+                        {
+                            <span class="author-name">
+                                <a href="@author.Url" title="Posts by admin" rel="author">@author.Name</a>
+                            </span>
+
+                        }
+                    </li>
+                    <li><i class="fa fa-clock-o"></i><a title="@Model.PublishDate.ToString("f")" href="">
+                                                         <time datetime="2014-10-09T23:51:55+00:00">@Model.PublishDate.ToString("M")</time>
+                        <time class="updated-time" datetime="2014-10-13T12:47:06+00:00">October 13</time>
+                                                     </a></li>
+                    <li class="blog-post-comments"><i class="fa fa-comments"></i>
+                     <a href="@Model.Comments.Url" class="comments-link" title="Comment on It’s new generation blog">@Model.Comments.Count Comments</a></li>
+                    <li class="post-cat">
+                        <i class="fa fa-tags"></i>
+                        @foreach (var category in @Model.Tags)
+                        {
+                            <a href="@category.Url" rel="category tag">@category.Name</a>
+                        }
+                    </li>          
+
+                </ul>
+            </div>
+        </div>
+        <div class="post-type-icon">
+            <i title="Image Post Format" class="fa fa-camera"></i>
+        </div>
+        <span class="sticky-post"><i class="fa fa-bookmark"></i></span>
+        <div class="post-content clearfix">
+            <div class="post-content-blog">
+                <p>@Html.Raw(@Model.Teaser)</p>
+            </div>
+            <div class="continue-reading pull-left">
+                <a href="@Model.Url">READ MORE</a>
+            </div>
+            <div class="blog-classic-share pull-right clearfix">
+                <div class="pull-left"><a class="open-share" href="http://www.2035themes.com/blogy/classic/its-new-generation-blog/"><i class="fa fa-share-alt"></i></a></div>
+                <div class="pull-left share-wrapper">
+                    <span class="tag-title-post pull-left cshare-text">SHARE : </span>
+                    <div class="share-tools pull-left">
+                        <ul>
+                            <li><a href="http://www.facebook.com/sharer.php?u=http://www.2035themes.com/blogy/classic/its-new-generation-blog/&amp;t=It’s new generation blog" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" target="_blank" title="Share on Facebook"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="https://twitter.com/share?url=http://www.2035themes.com/blogy/classic/its-new-generation-blog/&amp;text=It’s new generation blog" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" target="_blank" title="Share on Twitter"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="http://pinterest.com/pin/create/button/?source_url=http://www.2035themes.com/blogy/classic/its-new-generation-blog/&amp;media=http://www.2035themes.com/blogy/classic/wp-content/uploads/2014/10/classic-image-1-300x200.jpg&amp;description=It’s new generation blog" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" target="_blank" title="Share on Pinterest"><i class="fa fa-pinterest"></i></a></li>
+                            <li><a href="https://plus.google.com/share?url=http://www.2035themes.com/blogy/classic/its-new-generation-blog/" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" target="_blank" title="Share on Google Plus"><i class="fa fa-google-plus"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
+
