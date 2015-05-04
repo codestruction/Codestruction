@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Codestruction.Domain", "Dom
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Codestruction.Infrastructure.Umbraco", "Infrastructure\Codestruction.Infrastructure.Umbraco\Codestruction.Infrastructure.Umbraco.csproj", "{4FCCC99E-6E5F-4E37-A084-D41F58BA978B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Codestruction.Infrastructure", "Infrastructure\Codestruction.Infrastructure\Codestruction.Infrastructure.csproj", "{C7451541-11DD-4A2F-A369-729DF6D78A03}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +43,10 @@ Global
 		{4FCCC99E-6E5F-4E37-A084-D41F58BA978B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4FCCC99E-6E5F-4E37-A084-D41F58BA978B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4FCCC99E-6E5F-4E37-A084-D41F58BA978B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7451541-11DD-4A2F-A369-729DF6D78A03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7451541-11DD-4A2F-A369-729DF6D78A03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7451541-11DD-4A2F-A369-729DF6D78A03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7451541-11DD-4A2F-A369-729DF6D78A03}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -50,5 +56,6 @@ Global
 		{E3647D58-3A05-4F84-8B0C-EBABB65F1AD9} = {4C3A433F-685C-4CB0-8D77-328136A98078}
 		{66F3EEC1-7039-46F6-A2FF-160832B9F238} = {FFE3E477-EC40-4431-89D5-68EB2E5A4237}
 		{4FCCC99E-6E5F-4E37-A084-D41F58BA978B} = {82688F0C-32EA-44CA-B9E8-58727AE2F3A9}
+		{C7451541-11DD-4A2F-A369-729DF6D78A03} = {82688F0C-32EA-44CA-B9E8-58727AE2F3A9}
 	EndGlobalSection
 EndGlobal

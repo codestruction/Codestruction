@@ -1,0 +1,12 @@
+﻿@model Codestruction.Application.Contracts.Widgets.BlogArchivesWidget
+           
+
+<div class="sidebar-widget">
+    <h4>@Model.Title</h4><hr>		<ul>
+		                                 
+    @foreach (var dateLink in Model.Links)
+    {
+        <li><a href="@dateLink.Url">@dateLink.Title</a></li>
+    }
+	</ul>
+</div>

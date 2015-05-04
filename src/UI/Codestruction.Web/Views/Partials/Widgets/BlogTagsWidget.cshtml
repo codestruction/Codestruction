@@ -1,0 +1,11 @@
+﻿@model Codestruction.Application.Contracts.Widgets.BlogTagsWidget
+           
+<div class="sidebar-widget">
+    <h4>TAGS</h4><hr><div class="tagcloud">
+    @foreach (var tag in Model.Tags)
+    {
+    <a href="@tag.Url" style="font-size: @tag.Size :pt;">@tag.Name</a>
+
+    }
+     </div>
+</div>

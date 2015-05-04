@@ -4,11 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Codestruction.Application.Contracts.ViewModels
+namespace Codestruction.Application.Contracts.Widgets
 {
-    public class AuthorVm
+    public class TagVm
     {
         public string Name { get; set; }
         public string Url { get; set; }
+        public int Count { get; set; }
+        public int Size { get; set; }
     }
 }

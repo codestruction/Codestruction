@@ -41,6 +41,7 @@
   <ItemGroup>
     <Compile Include="Blog\Author.cs" />
     <Compile Include="Blog\BlogPost.cs" />
+    <Compile Include="Blog\FindPostsRequest.cs" />
     <Compile Include="Blog\IBlogDao.cs" />
     <Compile Include="Blog\IBlogPostOverview.cs" />
     <Compile Include="Blog\LatestPostsRequest.cs" />

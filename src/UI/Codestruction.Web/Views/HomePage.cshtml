@@ -3,23 +3,21 @@
     Layout = "MasterPage.cshtml";
 }
 
+<div ng-controller="ListingController as vm">
 
-@foreach (var post in Model.BlogPosts)
-{
-    @Html.Partial("~/Views/Partials/Blog/Listing/Post.cshtml", post)
-}
-           
-<div class="pagination pos-center">
-    <ul>
-        <li class="active"><a href="http://www.2035themes.com/blogy/classic/?classic-layout=right">1</a></li>
-        <li><a href="http://www.2035themes.com/blogy/classic/page/2/?classic-layout=right">2</a></li>
-        <li><a href="http://www.2035themes.com/blogy/classic/page/3/?classic-layout=right">3</a></li>
-        <li class="last"><a href="http://www.2035themes.com/blogy/classic/page/2/?classic-layout=right">Next Page »</a></li>
-    </ul>
+    @foreach (var post in Model.BlogPosts)
+    {
+        @Html.Partial("~/Views/Partials/Blog/Listing/Post.cshtml", post)
+    }
+
+    @Html.Partial("~/Views/Partials/Blog/Listing/PostAngular.cshtml")
+
+    <input type="hidden" value="@Model.DataUrl" id="data-url" />
+    <div class="pagination pos-center" ng-show="vm.hasMoreResults()">
+        <ul>
+            <li ><a ng-click="vm.loadMore()">LOAD MORE</a></li>
+        </ul>
+    </div>
+
+
 </div>
-
-                     
-                        
-                 
-                       
-              

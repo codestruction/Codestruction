@@ -44,9 +44,10 @@
     <script src="~/assets/js/main.js"></script>
     <script src="~/assets/js/widget/wpt-admin.js"></script>
     <script src="~/assets/js/widget/wp-tab-widget.js"></script>
-
+    <script src="~/assets/js/angular/1.3.15/angular.min.js"></script>
+    <script src="~/assets/js/apps/codestruction.js"></script>
 </head>
-    <body class="home blog">
+    <body class="home blog" ng-app="Codestruction">
         <div id="sb-site" class="classic fitvids" >
             @Html.Partial("~/Views/Partials/Shared/Navigation.cshtml")
         
@@ -57,41 +58,14 @@
                             @RenderBody()
                         </div>
                         <aside class="col-lg-4 sidebar">
-                            
+                            @Umbraco.RenderMacro("BlogArchivesWidget")
+                            @Umbraco.RenderMacro("BlogTagsWidget")
+                            @Umbraco.RenderMacro("BlogAuthorsWidget")
+                            @Umbraco.RenderMacro("BlogSocial")
                             @*@RenderSection("SideBar", false)*@
-                            <div class="sidebar-widget">
-                                <div class="author-widget custom-widget clearfix">
-                                    <div class="author-cover-background" style="background: url('http://www.2035themes.com/blogy/classic/wp-content/uploads/2014/10/Untitled-2.jpg'); background-size:cover;">
-                                        <div class="author-avatar">
-                                            <img height="80" width="80" src="http://www.2035themes.com/blogy/classic/wp-content/uploads/2014/10/ali_2.png" class="img-circle">
-                                        </div>
-                                    </div>
-                                    <div class="author-info pos-center clearfix">
-                                        <h2><a href="http://www.2035themes.com/blogy/classic/author/admin/ ">IBRAHIM ARACI</a></h2>                <p>Curabitur blandit tempus porttitor. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
-                                    </div>
-                                    <div class="author-works">
-                                        <div class="works-title">Currently</div>
-                                        <div class="works-details">
-                                            <ul>
-                                                <li><p><i class="fa fa-apple"></i>Designer at Solutionworks</p></li>
-                                                <li><p><i class="fa fa-map-marker f-icon"></i>in <span class="active-color">London</span></p></li>
-                                                <li><p><i class="fa fa-circle f-icontwo"></i>Avaible for Freelance</p></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>            
+                               
                             
-                            <div class="sidebar-widget">
-                                <h4>SOCIAL LINKS</h4><hr>        <div class="social-links custom-widget clearfix">
-                                                                     <ul>
-                                                                         <li class="behance"><a class="has-tooltip" data-toggle="tooltip" data-placement="top" title="" target="_blank" href="http://behance.net/alidemirci" data-original-title="Behance"><i class="fa fa-behance "></i></a></li>
-                                                                         <li class="dribbble"><a class="has-tooltip" data-toggle="tooltip" data-placement="top" title="" target="_blank" href="http://twitter.com/2035themes" data-original-title="Dribbble"><i class="fa fa-dribbble "></i></a></li>
-                                                                         <li class="facebook"><a class="has-tooltip" data-toggle="tooltip" data-placement="top" title="" target="_blank" href="http://facebook.com/2035themes" data-original-title="Facebook"><i class="fa fa-facebook "></i></a></li>
-                                                                         <li class="pinterest"><a class="has-tooltip" data-toggle="tooltip" data-placement="top" title="" target="_blank" href="http://pinterest.com/2035themes" data-original-title="Pinterest"><i class="fa fa-pinterest "></i></a></li>
-                                                                     </ul>
-                                                                 </div>
-                            </div>
+                      
 
                             <div class="sidebar-widget">
                                 <h4>META</h4><hr>			<ul>
@@ -103,28 +77,7 @@
                             </div><div class="sidebar-widget">
                                       <h4>FLICKR WIDGET</h4><hr>
                                       <div id="flickr-widget"><div class="flickr_badge_image" id="flickr_badge_image1"><a href="http://www.flickr.com/photos/agettys/16676936347/"><img src="http://farm8.staticflickr.com/7620/16676936347_faafda9837_s.jpg" alt="A photo on Flickr" title="" height="75" width="75"></a></div><div class="flickr_badge_image" id="flickr_badge_image2"><a href="http://www.flickr.com/photos/giburk/16698237409/"><img src="http://farm9.staticflickr.com/8691/16698237409_30217145fb_s.jpg" alt="A photo on Flickr" title="" height="75" width="75"></a></div><div class="flickr_badge_image" id="flickr_badge_image3"><a href="http://www.flickr.com/photos/129617410@N06/16698188129/"><img src="http://farm8.staticflickr.com/7283/16698188129_accb5a887c_s.jpg" alt="A photo on Flickr" title="PICT0024-Edit.jpg" height="75" width="75"></a></div><div class="flickr_badge_image" id="flickr_badge_image4"><a href="http://www.flickr.com/photos/mkh1949/16262032074/"><img src="http://farm8.staticflickr.com/7593/16262032074_6273f7e8be_s.jpg" alt="A photo on Flickr" title="" height="75" width="75"></a></div><div class="flickr_badge_image" id="flickr_badge_image5"><a href="http://www.flickr.com/photos/27704696@N04/16696796938/"><img src="http://farm9.staticflickr.com/8688/16696796938_e10a25b5ae_s.jpg" alt="A photo on Flickr" title="upload" height="75" width="75"></a></div><div class="flickr_badge_image" id="flickr_badge_image6"><a href="http://www.flickr.com/photos/velizarn/16883230572/"><img src="http://farm8.staticflickr.com/7650/16883230572_782a6cd37f_s.jpg" alt="A photo on Flickr" title="Saint-Malo" height="75" width="75"></a></div></div><!--simple flickr photos ends-->
-                                  </div><div class="sidebar-widget">
-                                            <h4>ARCHIVES</h4><hr>		<ul>
-		                                                                     <li><a href="http://www.2035themes.com/blogy/classic/2014/10/">October 2014</a></li>
-		                                                                     <li><a href="http://www.2035themes.com/blogy/classic/2014/09/">September 2014</a></li>
-		                                                                     <li><a href="http://www.2035themes.com/blogy/classic/2013/10/">October 2013</a></li>
-		                                                                     <li><a href="http://www.2035themes.com/blogy/classic/2013/08/">August 2013</a></li>
-		                                                                     <li><a href="http://www.2035themes.com/blogy/classic/2011/10/">October 2011</a></li>
-		                                                                 </ul>
-                                        </div><div class="sidebar-widget">
-                                                  <h4>TAGS</h4><hr><div class="tagcloud">
-                                                                       <a href="http://www.2035themes.com/blogy/classic/tag/china/" class="tag-link-5" title="1 topic" style="font-size: 8pt;">China</a>
-                                                                       <a href="http://www.2035themes.com/blogy/classic/tag/cover/" class="tag-link-21" title="1 topic" style="font-size: 8pt;">cover</a>
-                                                                       <a href="http://www.2035themes.com/blogy/classic/tag/design/" class="tag-link-6" title="14 topics" style="font-size: 22pt;">design</a>
-                                                                       <a href="http://www.2035themes.com/blogy/classic/tag/example/" class="tag-link-7" title="1 topic" style="font-size: 8pt;">Example</a>
-                                                                       <a href="http://www.2035themes.com/blogy/classic/tag/interface/" class="tag-link-8" title="14 topics" style="font-size: 22pt;">interface</a>
-                                                                       <a href="http://www.2035themes.com/blogy/classic/tag/modern/" class="tag-link-9" title="12 topics" style="font-size: 20.886363636364pt;">modern</a>
-                                                                       <a href="http://www.2035themes.com/blogy/classic/tag/parallax-2/" class="tag-link-20" title="1 topic" style="font-size: 8pt;">parallax</a>
-                                                                       <a href="http://www.2035themes.com/blogy/classic/tag/tag/" class="tag-link-10" title="1 topic" style="font-size: 8pt;">Tag</a>
-                                                                       <a href="http://www.2035themes.com/blogy/classic/tag/video/" class="tag-link-23" title="1 topic" style="font-size: 8pt;">video</a>
-                                                                       <a href="http://www.2035themes.com/blogy/classic/tag/vimeo/" class="tag-link-24" title="1 topic" style="font-size: 8pt;">vimeo</a>
-                                                                   </div>
-                                              </div>
+                                  </div>
                         </aside>
                     </div>
                 </div>

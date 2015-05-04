@@ -40,6 +40,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Autofac, Version=3.5.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\0. Filmbank\FilmbankWebsite\src\packages\Autofac.3.5.2\lib\net40\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac.Integration.Mvc">
+      <HintPath>..\..\packages\Autofac.Mvc4.3.1.0\lib\net40\Autofac.Integration.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac.Integration.WebApi">
+      <HintPath>..\..\packages\Autofac.WebApi.3.1.0\lib\net40\Autofac.Integration.WebApi.dll</HintPath>
+    </Reference>
     <Reference Include="AutoMapper">
       <HintPath>..\..\packages\AutoMapper.3.0.0\lib\net40\AutoMapper.dll</HintPath>
     </Reference>
@@ -226,6 +236,8 @@
     <Content Include="assets\images\video_overlay.png" />
     <Content Include="assets\js\admin\init.js" />
     <Content Include="assets\js\admin\upload-media.js" />
+    <Content Include="assets\js\angular\1.3.15\angular.min.js" />
+    <Content Include="assets\js\apps\codestruction.js" />
     <Content Include="assets\js\background-check.min.js" />
     <Content Include="assets\js\bootstrap.min.js" />
     <Content Include="assets\js\classie.js" />
@@ -272,7 +284,9 @@
     <Content Include="Config\FileSystemProviders.config" />
     <Content Include="Config\feedProxy.config" />
     <Content Include="Config\ExamineSettings.config" />
-    <Content Include="Config\ExamineIndex.config" />
+    <Content Include="Config\ExamineIndex.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Config\EmbeddedMedia.config" />
     <Content Include="Config\Dashboard.config" />
     <Content Include="Config\ClientDependency.config" />
@@ -304,6 +318,14 @@
     <Content Include="assets\fonts\novecento_demibold.woff" />
     <Content Include="assets\js\.DS_Store" />
     <Content Include="Views\Partials\Blog\Listing\Post.cshtml" />
+    <Content Include="Views\Partials\Blog\Listing\PostAngular.cshtml" />
+    <Content Include="Views\BlogArchivePage.cshtml" />
+    <Content Include="Views\MacroPartials\BlogArchiveWidget.cshtml" />
+    <Content Include="Views\Partials\Widgets\BlogArchivesWidget.cshtml" />
+    <Content Include="Views\MacroPartials\BlogTagsWidget.cshtml" />
+    <Content Include="Views\Partials\Widgets\BlogTagsWidget.cshtml" />
+    <Content Include="Views\MacroPartials\BlogAuthorsWidget.cshtml" />
+    <Content Include="Views\MacroPartials\BlogSocial.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -318,6 +340,8 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bootstrapp.cs" />
+    <Compile Include="CodestructionApp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Views\Partials\Class1.cs" />
   </ItemGroup>
@@ -325,6 +349,10 @@
     <ProjectReference Include="..\..\Application\Codestruction.Application\Codestruction.Application.csproj">
       <Project>{E3647D58-3A05-4F84-8B0C-EBABB65F1AD9}</Project>
       <Name>Codestruction.Application</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Infrastructure\Codestruction.Infrastructure\Codestruction.Infrastructure.csproj">
+      <Project>{C7451541-11DD-4A2F-A369-729DF6D78A03}</Project>
+      <Name>Codestruction.Infrastructure</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />

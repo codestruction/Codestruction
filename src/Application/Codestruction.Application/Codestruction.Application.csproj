@@ -30,15 +30,23 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Autofac">
+      <HintPath>..\..\packages\Autofac.3.5.2\lib\net40\Autofac.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
       <HintPath>..\..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
       <HintPath>..\..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Microsoft.AspNet.WebApi.Core.5.2.0\lib\net45\System.Web.Http.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -74,16 +82,39 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Contracts\Blog\AuthorVm.cs" />
+    <Compile Include="Config\ApplicationModule.cs" />
+    <Compile Include="Context\AppContext.cs" />
+    <Compile Include="Context\AppSettings.cs" />
+    <Compile Include="Context\IAppContext.cs" />
+    <Compile Include="Context\IUrlManager.cs" />
+    <Compile Include="Context\UrlManager.cs" />
+    <Compile Include="Contracts\Blog\Archive\BlogArchivePageVm.cs" />
+    <Compile Include="Contracts\Blog\Archive\BlogArchiveRequestDto.cs" />
+    <Compile Include="Contracts\Blog\Archive\BlogArchiveRm.cs" />
+    <Compile Include="Contracts\Blog\Archive\SearchInfoVm.cs" />
+    <Compile Include="Contracts\Blog\Archive\SearchMode.cs" />
+    <Compile Include="Contracts\Blog\AuthorDto.cs" />
     <Compile Include="Contracts\Blog\BlogListingPageVm.cs" />
+    <Compile Include="Contracts\Blog\Listing\BlogListingRm.cs" />
     <Compile Include="Contracts\Blog\BlogPostOverviewVm.cs" />
     <Compile Include="Contracts\Blog\CommentsVm.cs" />
-    <Compile Include="Contracts\Blog\TagVm.cs" />
-    <Compile Include="Controllers\BlogDetailsPageController.cs">
+    <Compile Include="Contracts\Blog\TagDto.cs" />
+    <Compile Include="Contracts\Shared\ListingResponse.cs" />
+    <Compile Include="Contracts\Widgets\BlogArchivesWidget.cs" />
+    <Compile Include="Contracts\Widgets\BlogTagsWidget.cs" />
+    <Compile Include="Contracts\Widgets\LinkVm.cs" />
+    <Compile Include="Contracts\Widgets\TagVm.cs" />
+    <Compile Include="Controllers\BlogApiController.cs" />
+    <Compile Include="Controllers\BlogArchivePageController.cs" />
+    <Compile Include="Controllers\HomePageController.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Controllers\BlogListingPageController.cs" />
+    <Compile Include="Controllers\WidgetsSurfaceController.cs" />
+    <Compile Include="Factories\BlogFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\BlogService.cs" />
+    <Compile Include="Services\WidgetService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -96,6 +127,10 @@
     <ProjectReference Include="..\..\Infrastructure\Codestruction.Infrastructure.Umbraco\Codestruction.Infrastructure.Umbraco.csproj">
       <Project>{4FCCC99E-6E5F-4E37-A084-D41F58BA978B}</Project>
       <Name>Codestruction.Infrastructure.Umbraco</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Infrastructure\Codestruction.Infrastructure\Codestruction.Infrastructure.csproj">
+      <Project>{C7451541-11DD-4A2F-A369-729DF6D78A03}</Project>
+      <Name>Codestruction.Infrastructure</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />

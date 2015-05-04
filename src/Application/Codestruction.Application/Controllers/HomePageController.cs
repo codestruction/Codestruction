@@ -7,12 +7,17 @@ namespace Codestruction.Application.Controllers
 {
     public class HomePageController : RenderMvcController 
     {
+        private readonly BlogService _blogService;
+
+        public HomePageController(BlogService blogService)
+        {
+            _blogService = blogService;
+        }
 
         public override ActionResult Index(RenderModel model)
         {
-            var service = new BlogService();
 
-            var listingPage = service.GetListingPage(model.Content.Id);
+            var listingPage = _blogService.GetListingPageVm(1, 1);
 
             return View(listingPage);
         }

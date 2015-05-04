@@ -1,0 +1,31 @@
+﻿@using Codestruction.Application.Contracts.Blog.Archive
+@inherits UmbracoViewPage<Codestruction.Application.Contracts.Blog.Archive.BlogArchivePageVm>
+    @{
+    Layout = "MasterPage.cshtml";
+    }
+
+    <div ng-controller="ListingController as vm">
+        
+        @if (Model.SearchInfo.Mode != SearchMode.Undefined)
+        {
+            <div class="pagination pos-center">
+                Showing posts for @Model.SearchInfo.Mode.ToString().ToLower() : @Model.SearchInfo.Value. <a href="@Model.SearchInfo.AllPostsUrl">Show all posts</a>
+            </div>
+        }
+
+        @foreach (var post in Model.BlogPosts)
+        {
+        @Html.Partial("~/Views/Partials/Blog/Listing/Post.cshtml", post)
+        }
+
+        @Html.Partial("~/Views/Partials/Blog/Listing/PostAngular.cshtml")
+
+        <input type="hidden" value="@Model.DataUrl" id="data-url" />
+        <div class="pagination pos-center" ng-show="vm.hasMoreResults()">
+            <ul>
+                <li><a ng-click="vm.loadMore()">LOAD MORE</a></li>
+            </ul>
+        </div>
+
+
+    </div>

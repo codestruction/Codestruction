@@ -4,15 +4,21 @@
     Layout = "MasterPage.cshtml";
 }
 
+<div ng-controller="ListingController as vm">
 
-@*foreach (var blogpost in CurrentPage.Children)
-{
-    <span>@blogpost.title</span>
-    <span>@blogpost.content</span>
-    <span>@blogpost.tags</span>
-}*@
+    @foreach (var post in Model.BlogPosts)
+    {
+        @Html.Partial("~/Views/Partials/Blog/Listing/Post.cshtml", post)
+    }
 
-@foreach (var post in Model.BlogPosts)
-{
-    <span>@post.Title</span>
-}
+    @Html.Partial("~/Views/Partials/Blog/Listing/PostAngular.cshtml")
+
+    <input type="hidden" value="@Model.DataUrl" id="data-url" />
+    <div class="pagination pos-center" ng-show="vm.hasMoreResults()">
+        <ul>
+            <li><a ng-click="vm.loadMore()">LOAD MORE</a></li>
+        </ul>
+    </div>
+
+
+</div>

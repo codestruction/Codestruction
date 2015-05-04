@@ -9,5 +9,8 @@ namespace Codestruction.Domain.Blog
     public interface IBlogDao
     {
         SearchResponse<IBlogPostOverview> GetLatestPosts(LatestPostsRequest request);
+        SearchResponse<IBlogPostOverview> Find(FindPostsRequest request);
+
+        IList<DateTime> GetAllDates();
     }
 }

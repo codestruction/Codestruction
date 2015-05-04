@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Examine.SearchCriteria;
 using Lucene.Net.Documents;
 
 namespace Codestruction.Infrastructure.Umbraco
@@ -47,16 +48,16 @@ namespace Codestruction.Infrastructure.Umbraco
 
             if (!string.IsNullOrEmpty(value))
             {
-                //var date = DateTools.StringToDate(value);
-                //if (!(date == DateTime.MinValue || date == DateTime.MaxValue))
-                //{
-                //    return date;
-                //}
-                DateTime dt = DateTime.MinValue;
-                if (DateTime.TryParse(value, out dt))
+                var date = DateTools.StringToDate(value);
+                if (!(date == DateTime.MinValue || date == DateTime.MaxValue))
                 {
-                    return dt;
+                    return date;
                 }
+                //DateTime dt = DateTime.MinValue;
+                //if (DateTime.TryParse(value, out dt))
+                //{
+                //    return dt;
+                //}
             }
             return null;
         }
@@ -109,6 +110,18 @@ namespace Codestruction.Infrastructure.Umbraco
                 return id.Value.ToString();
             }
             return string.Empty;
+        }
+        public static ISearchCriteria AddRawQueries(this IBooleanOperation booleanOperation, IEnumerable<string> customQueries)
+        {
+            var criteria = booleanOperation.Compile();
+            foreach (var customQuery in customQueries)
+            {
+                if (!string.IsNullOrEmpty(customQuery))
+                {
+                    criteria = criteria.RawQuery(customQuery);
+                }
+            }
+            return criteria;
         }
     }
 }
